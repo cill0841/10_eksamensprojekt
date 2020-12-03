@@ -4,23 +4,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
+
+<header>
+        <nav role="navigation">
+
+            <div class="logo-nav">
+                <a href="index.html"> <img src="logo.png" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="opskrifter.html">Opskrifter</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="om.html">Om mig</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
 
 <body>
 
-
    <main id="forside_main">
-        <!--        <h1 id="overskrift">Forside</h1>-->
         <section id="forside_oversigt"></section>
     </main>
 
+
     <script src="script.js"></script>
       <script>
+
         document.addEventListener("DOMContentLoaded", start);
+let indhold;
 
-
-        const url = "http://cilleabra.dk/kea/10_eksamensprojekt/wordpress/forside/";
+        const url = "http://cilleabra.dk/kea/10_eksamensprojekt/wordpress/wp-json/wp/v2/pages/11";
 
 
         async function start() {
@@ -34,6 +55,7 @@
             document.querySelector("#forside_oversigt").innerHTML = indhold.content.rendered;
 
         }
+
 
     </script>
 </body>

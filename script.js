@@ -1,21 +1,31 @@
-window.addEventListener("load", SidenVises);
+//---------------------------BURGER MENU---------------------//
+//Lånt fra Christians portfolio
 
-function SidenVises() {
-    console.log("SidenVises");
+//Const er som var, bare uden at kunne ændre på parametrene. (block scope)
+// () => er shortcode og kalder funktionen [function()]
+const navSlide = () => {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav-links");
+    const navLinks = document.querySelectorAll(".nav-links li");
 
-    document.querySelector("#burgermenu").addEventListener("click", toggleMenu);
+    burger.addEventListener('click', () => {
+        // Toggle
+        nav.classList.toggle('nav-active');
+        // animation af navlinks
+        navLinks.forEach(setStyleLink);
+        // burger animationen
+        burger.classList.toggle('toggle');
+    });
 }
-
-function toggleMenu() {
-    console.log("toggleMenu");
-
-    document.querySelector("#menu").classList.toggle("hidden");
-
-    let erSkjult = document.querySelector("#menu").classList.contains("hidden");
-
-    if (erSkjult == true) {
-        document.querySelector("#burgermenu").innerHTML = "<img src = \"billeder_videoer/burgermenu.svg\" alt=\"burger\">";
+//her starter animationen på hamburger
+function setStyleLink(el, index) {
+    if (el.style.animation) {
+        el.style.animation = "";
     } else {
-        document.querySelector("#burgermenu").innerHTML = "<img src=\"billeder_videoer/kryds.svg\" alt = \"kryds\">";
+        el.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + .5}s`;
     }
 }
+
+//Kalder funktionen navSlide (Function invocation)
+navSlide()
+
