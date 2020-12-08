@@ -13,18 +13,15 @@ body {
 /********************************** NAVIGATION ********************************/
 
 nav {
-    display: flex;
+      display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 13vh;
-    background: #7CB2C2;
+
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
-    -webkit-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
 }
 
 /*
@@ -36,38 +33,6 @@ nav {
     font-size: 20px;
 }
 */
-
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 45%;
-}
-
-.nav-links a {
-    color: #FFF9F0;
-    text-decoration: none;
-    font-family: 'Dancing Script', cursive;
-    padding: 15px;
-    font-size: 1.07rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border: 3px solid #7CB2C2;
-    transition: all .6s ease;
-    border-radius: 15px;
-}
-
-.nav-links li {
-    list-style: none;
-}
-
-.nav-links a:hover {
-    border: 3px solid #8C0E08;
-    background-color: #FFF9F0;
-    color: #7CB2C2;
-    -webkit-box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.75);
-}
 
 
 .burger {
@@ -83,6 +48,56 @@ nav {
 }
 
 
+
+
+
+ul {
+
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.logo-nav a:after {
+display: none;
+}
+
+
+.logo-nav img {
+border-radius: 100px; }
 
 /********************************** NAV ANIMATION ********************************/
 @keyframes navLinkFade {
@@ -125,13 +140,13 @@ nav {
     .nav-links {
         position: absolute;
         right: 0px;
-        height: 70vh;
-        top: 13vh;
-        background: #7CB2C2;
+        height: 40vh;
+        top: 17vh;
+        background: #ccaba3;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 100%;
         transform: translateX(100%);
         transition: transform .5s ease-in;
     }
@@ -156,3 +171,89 @@ nav {
 
 
 
+
+
+
+/***************************************** FORSIDE ********************************/
+
+
+
+.forside_splash img {
+width: 100%;
+        position: absolute;
+    top: 0;
+        object-fit: cover;
+    object-position: 80% 80%;
+}
+
+
+
+
+.pile img {
+width: 10%;
+}
+
+
+
+/*
+#forside_oversigt {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin: 50px 0 100px;
+}*/
+
+
+
+
+
+
+/************************PILE ***********************/
+
+.box {
+    position: absolute;
+    top: 550px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.box span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(45deg);
+    animation: animate 2s infinite;
+    margin: -10px;
+
+
+}
+
+.box span:nth-child(2) {
+    animation-delay: -0.2s;
+
+}
+
+.box span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+
+}
