@@ -9,6 +9,18 @@ body {
     padding-top: 13vh;
 }
 
+.column_wide {
+display: flex;
+    flex-wrap: wrap;
+
+}
+
+.column_narrow {
+ display: flex;
+    flex-wrap: wrap;
+}
+
+
 
 /********************************** NAVIGATION ********************************/
 
@@ -34,11 +46,9 @@ nav {
 }
 */
 
-
 .burger {
     display: none;
 }
-
 .burger div {
     background-color: #FFF9F0;
     width: 25px;
@@ -46,11 +56,6 @@ nav {
     margin: 5px;
     transition: all .3s ease;
 }
-
-
-
-
-
 ul {
 
   padding: 0;
@@ -95,9 +100,9 @@ a:hover:after {
 display: none;
 }
 
-
 .logo-nav img {
-border-radius: 100px; }
+border-radius: 100px;
+}
 
 /********************************** NAV ANIMATION ********************************/
 @keyframes navLinkFade {
@@ -180,10 +185,13 @@ border-radius: 100px; }
 
 .forside_splash img {
 width: 100%;
+/*
         position: absolute;
     top: 0;
+*/
         object-fit: cover;
     object-position: 80% 80%;
+
 }
 
 
@@ -195,13 +203,61 @@ width: 10%;
 
 
 
+
+#forside_main {
 /*
-#forside_oversigt {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
     margin: 50px 0 100px;
-}*/
+*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+.citat {
+padding-top: 120px;
+        position: relative;
+    left: 28%;
+}
+
+
+.forside_knap {
+background-color: #ccaba2;
+        width: 28%;
+    border-radius: 17px;
+    position: relative;
+    left: 35%;
+margin-top: 30px;
+}
+
+
+.forside_collage img{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+
+.forside_tekst {
+
+/*    margin-top: 30px;*/
+    padding: 30px;
+}
+
+
+
+.tips_billede img {
+width: 20%;
+    height: 20%;
+}
+
+
+
+
 
 
 
@@ -212,7 +268,7 @@ width: 10%;
 
 .box {
     position: absolute;
-    top: 550px;
+    top: 650px;
     left: 50%;
     transform: translate(-50%, -50%);
 
