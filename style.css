@@ -220,18 +220,18 @@ width: 10%;
 
 .citat {
 padding-top: 120px;
-        position: relative;
-    left: 28%;
+        text-align: center;
 }
 
 
 .forside_knap {
 background-color: #ccaba2;
-        width: 28%;
+        width: 27%;
     border-radius: 17px;
     position: relative;
     left: 35%;
 margin-top: 30px;
+    text-align: center;
 }
 
 
@@ -251,8 +251,46 @@ margin-top: 30px;
 
 
 .tips_billede img {
-width: 20%;
-    height: 20%;
+width: 50%;
+ height: 50%;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.tips_tekst {
+text-align: center;
+        margin-bottom: 25px;
+    margin-top: 9px;
+
+}
+
+
+.tips_overskrift {
+margin-bottom: 20px;
+      position: relative;
+    left: 37%;
+}
+
+
+
+
+
+.insta_billede img {
+   width: 50%;
+ height: 50%;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.insta_tekst {
+
+    margin-bottom: 20px;
+      position: relative;
+    left: 25%;
 }
 
 
@@ -261,8 +299,66 @@ width: 20%;
 
 
 
+@media (min-width:800px) {
+
+    .forside_knap {
+background-color: #ccaba2;
+        width: 20%;
+    border-radius: 17px;
+    position: relative;
+    left: 40%;
+margin-top: 30px;
+    text-align: center;
+
+}
 
 
+
+    .forside_collage img{
+    width: 70%;
+         display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+   .forside_tekst {
+
+width: 60%;
+}
+
+
+
+  .column_wide {
+display: flex;
+    flex-wrap: nowrap;
+
+}
+
+
+
+    .tips_wide {
+
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+
+    .tips_narrow {
+    display: flex;
+    }
+
+    .insta_billede img {
+    width: 10%;
+    }
+
+    .insta_wide {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+
+}
 
 /************************PILE ***********************/
 
@@ -313,3 +409,138 @@ width: 20%;
     }
 
 }
+
+
+
+
+
+
+
+/************************FOOTER ***********************/
+
+#footer {
+    color: white;
+}
+
+
+
+#footer .sectionwrapper {
+    background-color: #a3826f;
+    opacity: 72%;
+    padding: 40px 20px 40px 20px;
+    margin-top: 45px;
+}
+
+
+
+#footer .col {
+    padding: 0px;
+    width: 100%;
+}
+
+
+
+#footer .txt,
+#footer .txt2 {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+#footer .tele,
+#footer .mail {
+    margin-top: 10px;
+}
+
+
+
+/*** Information ***/
+#footer .overskrift {
+    margin-top: 20px;
+}
+
+
+
+#footer .txt {
+    margin-bottom: 20px;
+}
+
+
+
+/**MEDIAQUERY**/
+@media (min-width:800px) {
+
+
+
+    #footer .col {
+        flex-grow: 1;
+        flex-basis: 100px;
+        margin-right: 20px;
+    }
+
+
+
+    #footer .col:first-child {
+        flex-grow: 1;
+        margin-left: 20px;
+        margin-right: 60px;
+    }
+
+
+
+    @media (min-width:800px) {
+        #footer .overskrift {
+            margin-top: 0px;
+        }
+    }
+
+
+    .sectionwrapper {
+        display: flex;
+        Flex-wrap: wrap;
+    }
+
+
+
+
+
+
+
+
+
+
+
+ /************************OM SIDE ***********************/
+
+    /*** Kontaktformular ***/
+#footer .bottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+#footer .navn,
+#footer .email,
+#footer .besked {
+    background-color: #ffffff;
+    color: #b5b0a6;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+
+
+#footer .send {
+    background-color: #29487d;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+
+
