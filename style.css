@@ -37,7 +37,6 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 13vh;
-
     position: fixed;
     top: 0;
     width: 100%;
@@ -172,7 +171,15 @@ border-radius: 100px;
         z-index: 1;
     }
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -192,11 +199,15 @@ width: 100%;
     object-position: 50% 50%;
 */
 
+/*
     margin-left: 50vw;
   transform: translate(-50%);
+*/
 }
 
-
+.forside_oversigt {
+ background-image: url("rundny.svg");
+}
 
 
 .pile img {
@@ -337,7 +348,7 @@ display: flex;
     }
 
     .insta_billede img {
-    width: 10%;
+    width: 20%;
     }
 
     .insta_wide {
@@ -346,29 +357,37 @@ display: flex;
     }
 
 
-.wp-block-group__inner-container {
-    display: flex;
-
-}
 
 
 }
 
 
-/*
-.div1 {
-  background: linear-gradient(lightblue, orange);
-  height: 100vh;
+
+
+
+
+
+
+.videohead
+{
+/*margin: 5px 0 0 1px;*/
+
 }
 
-.div2 {
-  margin-top: -100px;
-  background: aqua;
-  height: 100VH;
-  clip-path: url(#wave);
-}
-*/
+.logo
+{
 
+    margin-top: -175px;
+    width: 103%;
+    margin-left: -19px;
+
+}
+
+
+video {
+margin-top: -140px;
+    width: 100%;
+}
 
 
 /************************PILE ***********************/
@@ -520,6 +539,10 @@ display: flex;
 
 
 
+
+
+
+}
 
 
 
