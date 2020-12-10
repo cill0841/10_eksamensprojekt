@@ -29,3 +29,6 @@ function setStyleLink(el, index) {
 //Kalder funktionen navSlide (Function invocation)
 navSlide()
 
+
+
+

@@ -1,4 +1,4 @@
-/*hje med dig*/
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -19,10 +19,16 @@ display: flex;
 .column_narrow {
  display: flex;
     flex-wrap: wrap;
-    color: red;
+
 }
 
 
+#forside_main, #om_main, #kontakt_main {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -107px;
+}
 
 /********************************** NAVIGATION ********************************/
 
@@ -38,15 +44,6 @@ nav {
     z-index: 1;
 }
 
-/*
-.logo {
-    color: #FFF9F0;
-    text-transform: uppercase;
-    font-family: 'oswald', sans-serif;
-    letter-spacing: 5px;
-    font-size: 20px;
-}
-*/
 
 .burger {
     display: none;
@@ -104,6 +101,7 @@ display: none;
 
 .logo-nav img {
 border-radius: 100px;
+    margin-right: 216px;
 }
 
 /********************************** NAV ANIMATION ********************************/
@@ -185,15 +183,17 @@ border-radius: 100px;
 
 
 
-.forside_splash img {
-width: 100%;
+.forside_splash {
 /*
+width: 100%;
         position: absolute;
     top: 0;
-*/
         object-fit: cover;
-    object-position: 80% 80%;
+    object-position: 50% 50%;
+*/
 
+    margin-left: 50vw;
+  transform: translate(-50%);
 }
 
 
@@ -201,20 +201,6 @@ width: 100%;
 
 .pile img {
 width: 10%;
-}
-
-
-
-
-#forside_main {
-/*
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    margin: 50px 0 100px;
-*/
-    display: flex;
-    flex-wrap: wrap;
 }
 
 
@@ -360,13 +346,36 @@ display: flex;
     }
 
 
+.wp-block-group__inner-container {
+    display: flex;
+
 }
+
+
+}
+
+
+/*
+.div1 {
+  background: linear-gradient(lightblue, orange);
+  height: 100vh;
+}
+
+.div2 {
+  margin-top: -100px;
+  background: aqua;
+  height: 100VH;
+  clip-path: url(#wave);
+}
+*/
+
+
 
 /************************PILE ***********************/
 
 .box {
     position: absolute;
-    top: 650px;
+    top: 539px;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -590,11 +599,13 @@ display: flex;
     }
 
 
-    .om_billede img {
+    .billede_om img {
 
-
-        width: 80vw;
-        height: auto;
+  width: 10%;
+ height: 10%;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
     }
 
 
