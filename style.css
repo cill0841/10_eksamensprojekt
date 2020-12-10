@@ -546,3 +546,56 @@ display: flex;
 }
 
 
+
+    /************************ kontakt ***********************/
+
+    /*** Kontaktformular ***/
+    #footer .bottom {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
+    .navn,
+    .email,
+    .besked {
+        background-color: #ffffff;
+        color: #b5b0a6;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+
+
+
+    .send {
+        background-color: #29487d;
+        color: #ffffff;
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+
+    }
+
+    /************************ kontakt slut ***********************/
+
+    /************************ om ***********************/
+
+
+    .om_splash img {
+
+        width: 100vw;
+        height: auto;
+
+    }
+
+
+    .om_billede img {
+
+
+        width: 80vw;
+        height: auto;
+    }
+
+
+

@@ -1,19 +1,89 @@
-     <section class="col">
-                    <section class="top">
-                        <h2>kontakt</h2>
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav role="navigation">
+
+        <div class="logo-nav">
+            <a href="index.html"> <img src="HandmadebyTone-logo-100x100-1.jpg" alt=""></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="om.html">Om Handmade By Tone</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="kurv.html">Kurv</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+    <main id="forside_main">
+        <section id="forside_oversigt"></section>
+
+
+
+    </main>
+
+
+    <footer>
+        <section id="footer">
+            <section class="sectionwrapper">
+
+                <section class="col">
+                    <section class="overskrift">
+                        <h2>Kontakt Information</h2>
                     </section>
-                    <section class="bottom">
-                        <section class="navn">
-                            <p>Navn</p>
-                        </section>
-                        <section class="email">
-                            <p>E-mail</p>
-                        </section>
-                        <section class="besked">
-                            <p>Besked</p>
-                        </section>
-                        <section class="send">
-                            <p>Send</p>
-                        </section>
+                    <section class="txt">
+                        <p><strong>Tlf. nr.</strong> <br> +45 74 42 18 48 <br> <br> <strong>E-mail</strong> <br> info@handmadebytone.dk <br> <br> <strong>Adresse</strong> <br> Friheds Allé 42, 9000 Aalborg <br> <br>
+                        </p>
+
                     </section>
                 </section>
+
+
+            </section>
+
+        </section>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+        let indhold;
+
+        const url = "http://cilleabra.dk/kea/10_eksamensprojekt/wordpress/wp-json/wp/v2/pages/11";
+
+
+        async function start() {
+            const hentUrl = await fetch(url);
+            indhold = await hentUrl.json();
+            visIndhold();
+        }
+
+        function visIndhold() {
+            console.log(visIndhold)
+            document.querySelector("#forside_oversigt").innerHTML = indhold.content.rendered;
+
+        }
+    </script>
+</body></html>
+
+
+
