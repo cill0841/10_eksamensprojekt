@@ -186,41 +186,32 @@ border-radius: 100px;
 
 
 
-/***************************************** FORSIDE ********************************/
+/***************************************** FORSIDE I MOBILVERSION********************************/
 
 
-
-.forside_splash {
-/*
-width: 100%;
-        position: absolute;
-    top: 0;
-        object-fit: cover;
-    object-position: 50% 50%;
-*/
+#forside_oversigt {
+margin-top: 193px;
+}
 
 /*
-    margin-left: 50vw;
-  transform: translate(-50%);
+.tips_wide {
+ background-image: url("rundny_png.png");
+      background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  height:300px;
+  width: 300px;
+    margin-top: 50px;
+}
 */
-}
-
-.forside_oversigt {
- background-image: url("rundny.svg");
-}
-
-
-.pile img {
-width: 10%;
-}
 
 
 
 
 .citat {
-padding-top: 120px;
-        text-align: center;
+text-align: center;
 }
+
 
 
 .forside_knap {
@@ -238,12 +229,13 @@ margin-top: 30px;
     width: 100%;
     height: 100%;
     margin-top: 30px;
+        padding: 30px;
 }
 
 
 .forside_tekst {
 
-/*    margin-top: 30px;*/
+
     padding: 30px;
 }
 
@@ -290,7 +282,48 @@ margin-bottom: 20px;
     margin-bottom: 20px;
       position: relative;
     left: 25%;
+    margin-top: 60px;
 }
+
+
+.videohead
+{
+/*margin: 5px 0 0 1px;*/
+
+}
+
+.logo
+{
+
+    margin-top: -175px;
+    width: 103%;
+    margin-left: -19px;
+
+}
+
+
+video {
+margin-top: -140px;
+    width: 100%;
+}
+
+
+
+
+
+   .forside_knap {
+background-color: #ccaba2;
+        width: 30%;
+    border-radius: 17px;
+    position: relative;
+    left: 35%;
+margin-top: 30px;
+    text-align: center;
+
+}
+
+
+
 
 
 
@@ -301,23 +334,14 @@ margin-bottom: 20px;
 @media (min-width:800px) {
 
     .forside_knap {
-background-color: #ccaba2;
-        width: 20%;
-    border-radius: 17px;
-    position: relative;
-    left: 40%;
-margin-top: 30px;
-    text-align: center;
 
+        width: 10%;
+        left: 45%;
 }
 
 
-
     .forside_collage img{
-    width: 70%;
-         display: block;
-  margin-left: auto;
-  margin-right: auto;
+/*  intet endnu*/
 
 }
 
@@ -348,17 +372,30 @@ display: flex;
     }
 
     .insta_billede img {
-    width: 20%;
+    width: 5%;
     }
 
-    .insta_wide {
+/*
+    .insta_narrow {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    }
+*/
+
+
+    .box {
+/*    virker ikke i web lige nu??!!*/
+    top: 282px;
+
     }
 
 
 
 
+
+
+
+
 }
 
 
@@ -368,33 +405,13 @@ display: flex;
 
 
 
-.videohead
-{
-/*margin: 5px 0 0 1px;*/
-
-}
-
-.logo
-{
-
-    margin-top: -175px;
-    width: 103%;
-    margin-left: -19px;
-
-}
-
-
-video {
-margin-top: -140px;
-    width: 100%;
-}
 
 
 /************************PILE ***********************/
 
 .box {
     position: absolute;
-    top: 539px;
+    top: 282px;
     left: 50%;
     transform: translate(-50%, -50%);
 
