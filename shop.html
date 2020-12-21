@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav role="navigation">
+
+            <div class="logo-nav">
+                <a href="index.html"> <img src="HandmadebyTone-logo-100x100-1.jpg" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="om.html">Om Handmade By Tone</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+
+            <a href="kurv.html"><img src="icons8-basket-80.png" style="width:35px;height:35px;"></a>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <img id="shop_splash" src="billede6.png">
+
+    <h1 id="shop_h1"> Køb produkter</h1>
+
+
+    <!--FILTER / KNAPPERNE-->
+    <nav id="filter_nav">
+        <button class="filter valgt" data-kategori="alle">Alle</button>
+        <button class="filter valgt" data-kategori="smaa_bryster">Små bryster</button>
+        <button class="filter valgt" data-kategori="store_bryster">Store bryster</button>
+        <button class="filter valgt" data-kategori="penis">Penis</button>
+
+
+    </nav>
+
+
+
+    <h4> </h4>
+
+    <!--NAVN OG BILLEDE PÅ LOOP VIEW-->
+    <template>
+        <article class="bryster">
+            <img class="billede" src="">
+            <h1 class="navn"></h1>
+            <!--            <h2 class="tekst"></h2>-->
+            <p class="pris"></p>
+            <h5 class="knap"></h5>
+
+        </article>
+    </template>
+
+
+    <main>
+
+
+        <section id="bryster_oversigt"></section>
+
+
+    </main>
+
+
+
+    <!--SINGLE VIEW-->
+    <section id="popop">
+        <article>
+            <button id="luk"> X</button>
+            <img src="" alt="">
+            <section>
+                <h1></h1>
+                <h2></h2>
+                <p></p>
+                <h5></h5>
+                <!--
+                    <p> <span class="lang"> </span></p>
+                 <p> Pris: <span class="pris"> </span></p>
+-->
+            </section>
+
+        </article>
+    </section>
+
+
+
+
+    <footer>
+        <section id="footer">
+            <section class="sectionwrapper">
+
+                <section class="col">
+                    <section class="overskrift">
+                        <h2>Handmade By Tone</h2>
+                    </section>
+                    <section class="txt">
+                        <p><strong>Tlf. nr.</strong><br> +45 31 77 19 95 <br> <br> <strong>E-mail</strong> <br> kontakt@handmadebytone.dk <br> <br> <strong>Adresse</strong> <br> C. A. Olesens Gade 1, 9000 Aalborg <br> <br>
+                        </p>
+
+                    </section>
+                </section>
+
+                <section id="footer_links">
+                    <section class="overskrift">
+                        <h2>Links </h2>
+                    </section>
+
+
+
+                    <ul class="footer2_links">
+                        <li><a href="handelsbetingelser.html">Handelsbetingelser</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </section>
+
+
+
+                <section id="some">
+                    <section class="overskrift">
+                        <h2>Følg os på sociale medier </h2>
+                    </section>
+
+
+                    <img src="icons8-instagram-80%20(1).png">
+
+
+                    <img src="icons8-facebook-80.png">
+
+
+                </section>
+
+            </section>
+
+        </section>
+
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        const url = "http://cilleabra.dk/kea/10_eksamensprojekt/wordpress/wp-json/wp/v2/bryst?_embed";
+
+        const skabelon = document.querySelector("template").content;
+
+        const liste = document.querySelector("#bryster_oversigt");
+
+
+        let filter = "alle";
+
+
+        async function start() {
+            const hentUrl = await fetch(url);
+            indhold = await hentUrl.json();
+            visIndhold();
+            addEventlistenersToButtons();
+        }
+
+
+
+        function visIndhold() {
+            liste.innerHTML = "";
+
+
+
+            indhold.forEach(bryster => {
+                if (filter == "alle" || filter == bryster._embedded["wp:term"][0][0].slug) {
+                    const klon = skabelon.cloneNode(true);
+                    console.log(bryster._embedded["wp:term"][0][0].slug + " filter " + filter)
+
+                    klon.querySelector(".billede").src = bryster.billede.guid;
+                    klon.querySelector(".navn").textContent = bryster.navn;
+
+                    klon.querySelector(".pris").textContent = bryster.pris;
+                    klon.querySelector(".knap").textContent = bryster.knap;
+
+                    klon.querySelector(".knap").addEventListener("click", function() {
+                        visDeltaljer(bryster)
+                    })
+
+
+                    liste.appendChild(klon);
+
+                }
+
+
+            })
+        }
+
+
+        function visDeltaljer(bryster) {
+            console.log("bryster", bryster);
+            popop.style.display = "block";
+
+
+
+            popop.querySelector("h1").textContent = bryster.navn;
+            popop.querySelector("h2").textContent = bryster.pris;
+            popop.querySelector("p").textContent = bryster.tekst;
+            popop.querySelector("img").src = bryster.billede.guid;
+            popop.querySelector("h5").textContent = bryster.knap2;
+
+
+        }
+
+
+
+
+        document.querySelector("#luk").addEventListener("click", () => popop.style.display = "none");
+
+        function addEventlistenersToButtons() {
+            document.querySelectorAll(".filter").forEach((btn) => {
+                btn.addEventListener("click", filterBTNs);
+
+            });
+        }
+
+        function filterBTNs() {
+            filter = this.dataset.kategori;
+            document.querySelector("h4").textContent = this.textContent;
+            document.querySelectorAll(".filter").forEach((btn) => {
+                btn.classList.remove("valgt");
+            })
+            this.classList.add("valgt");
+            visIndhold();
+        }
+
+
+
+
+
+
+
+
+
+        //        scroll til nav farve
+        const div = document.querySelector("nav");
+        const meter = document.querySelector("progress");
+        document.addEventListener("scroll", tjekScroll);
+
+        function tjekScroll() {
+            console.log(window.scrollY);
+            if (window.scrollY >= 200) {
+                div.style.backgroundColor = "rgb(193, 162, 145)";
+
+            } else {
+                div.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

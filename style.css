@@ -1,39 +1,63 @@
-
 * {
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
+
 body {
     background: #fff;
     padding-top: 13vh;
 }
 
-.column_wide {
-display: flex;
-    flex-wrap: wrap;
 
-}
-
-.column_narrow {
- display: flex;
-    flex-wrap: wrap;
-
-}
-
-
-#forside_main, #om_main, #kontakt_main {
+#forside_main,
+#om_main,
+/*#kontakt_main,*/
+om_main {
 
     display: flex;
     flex-wrap: wrap;
     margin-top: -107px;
 }
 
+
+
+
+/*tekst*/
+
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+Regular 400
+Semi-bold 600
+*/
+
+
+/*
+overskrifter:
+ font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+*/
+
+
+
+/*
+brødtekst:
+ text-align: left;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+*/
+
+
 /********************************** NAVIGATION ********************************/
 
 nav {
-      display: flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 13vh;
@@ -41,66 +65,75 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1;
+    height: 13vh;
 }
 
 
 .burger {
     display: none;
 }
+
 .burger div {
-    background-color: #FFF9F0;
+    background-color: white;
     width: 25px;
     height: 3px;
     margin: 5px;
     transition: all .3s ease;
 }
+
 ul {
 
-  padding: 0;
-  list-style: none;
-  display: table;
-  width: 600px;
-  text-align: center;
-}
-li {
-  display: table-cell;
-  position: relative;
-  padding: 15px 0;
-}
-a {
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.15em;
-  display: inline-block;
-  padding: 15px 20px;
-  position: relative;
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 600px;
+    text-align: center;
 }
 
-a:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
+li {
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
 }
+
+a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1.6px;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.nav-links a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
 a:hover:after {
-  width: 100%;
-  left: 0;
+    width: 100%;
+    left: 0;
 }
 
 .logo-nav a:after {
-display: none;
+    display: none;
 }
 
 .logo-nav img {
-border-radius: 100px;
+    border-radius: 100px;
     margin-right: 216px;
+    width: 25%;
 }
 
 /********************************** NAV ANIMATION ********************************/
@@ -167,7 +200,7 @@ border-radius: 100px;
 
     .nav-active {
         transform: translateX(0%) !important;
-        opacity: 95%;
+        opacity: 100%;
         z-index: 1;
     }
 
@@ -189,147 +222,184 @@ border-radius: 100px;
 /***************************************** FORSIDE I MOBILVERSION********************************/
 
 
-#forside_oversigt {
-margin-top: 193px;
-}
 
-/*
+
 .tips_wide {
- background-image: url("rundny_png.png");
-      background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  height:300px;
-  width: 300px;
-    margin-top: 50px;
+    background-color: #F2E5D3;
+
 }
-*/
 
 
 
 
 .citat {
-text-align: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2em;
 }
 
+.citat2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-top: 11px;
 
+}
+
+.tekst_overskrift {
+
+
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+
+}
 
 .forside_knap {
-background-color: #ccaba2;
-        width: 27%;
+    background-color: #ccaba2;
+    width: 27%;
     border-radius: 17px;
     position: relative;
     left: 35%;
-margin-top: 30px;
+    margin-top: 30px;
     text-align: center;
 }
 
 
-.forside_collage img{
-    width: 100%;
+.forside_collage img {
+    width: 80%;
     height: 100%;
     margin-top: 30px;
-        padding: 30px;
+    padding: 30px;
 }
 
 
 .forside_tekst {
 
+    margin: 30px;
+    margin-top: 65px;
+    text-align: left;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+}
 
-    padding: 30px;
+
+.forside_tekst_2 {
+    margin-top: 30px;
+
 }
 
 
 
 .tips_billede img {
-width: 50%;
- height: 50%;
-     display: block;
-  margin-left: auto;
-  margin-right: auto;
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
 .tips_tekst {
-text-align: center;
-        margin-bottom: 25px;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 25px;
     margin-top: 9px;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
 
 }
 
 
 .tips_overskrift {
-margin-bottom: 20px;
-      position: relative;
-    left: 37%;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+
 }
 
 
 
-
-
 .insta_billede img {
-   width: 50%;
- height: 50%;
-     display: block;
-  margin-left: auto;
-  margin-right: auto;
+    width: 50%;
+    height: 50%;
+    /*    display: block;*/
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 .insta_tekst {
 
     margin-bottom: 20px;
-      position: relative;
-    left: 25%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
     margin-top: 60px;
 }
 
 
-.videohead
-{
-/*margin: 5px 0 0 1px;*/
 
-}
 
-.logo
-{
+.streg {
 
-    margin-top: -175px;
-    width: 103%;
-    margin-left: -19px;
+    width: 100vw;
+    position: relative;
+    top: -239px;
+
 
 }
 
 
 video {
-margin-top: -140px;
+    margin-top: -92px;
     width: 100%;
 }
 
 
+.videohead {
+    position: relative;
+}
 
 
-
-   .forside_knap {
-background-color: #ccaba2;
-        width: 30%;
+.forside_knap {
+    background-color: #ccaba2;
+    width: 30%;
     border-radius: 17px;
     position: relative;
     left: 35%;
-margin-top: 30px;
+    margin-top: 30px;
     text-align: center;
 
 }
 
 
+.insta_narrow {
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
 
 
 
-
-
-
-
+/***************************************** FORSIDE I WEBVERSION********************************/
 
 @media (min-width:800px) {
 
@@ -337,62 +407,135 @@ margin-top: 30px;
 
         width: 10%;
         left: 45%;
-}
+    }
 
 
-    .forside_collage img{
-/*  intet endnu*/
+    #forside_oversigt {
+        margin-top: -515px;
+    }
 
-}
-
-   .forside_tekst {
-
-width: 60%;
-}
-
+    .streg {
+        width: 100vw;
+        position: relative;
+        top: -735px;
+    }
 
 
-  .column_wide {
-display: flex;
-    flex-wrap: nowrap;
+    .insta_narrow .wp-block-group__inner-container {
+        display: flex;
 
-}
+    }
+
+    .video {
+        position: relative;
+        top: -108px;
+    }
+
+
+    .forside_collage img {
+        /*  intet endnu*/
+
+    }
+
+    .forside_tekst {
+        margin-top: 110px;
+        width: 60%;
+    }
+
+
+
+    .column_wide {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30px;
+    }
 
 
 
     .tips_wide {
+        background-image: url("runddennyeste.png");
+        display: flex;
+        flex-wrap: wrap;
+        background-color: inherit;
+        background-position: center;
+        background-size: cover;
+        height: 990px;
 
-    display: flex;
-    flex-wrap: wrap;
     }
 
 
     .tips_narrow {
-    display: flex;
+
+        display: flex;
+        justify-content: center;
+        margin-top: 230px;
+        margin-left: 40px;
     }
+
+
+    .tips_billede img {
+        width: 300px;
+        height: 450px;
+        margin-right: 70px;
+        margin-left: 82px;
+
+    }
+
 
     .insta_billede img {
-    width: 5%;
-    }
-
-/*
-    .insta_narrow {
-    display: flex;
-    flex-wrap: nowrap;
-    }
-*/
-
-
-    .box {
-/*    virker ikke i web lige nu??!!*/
-    top: 282px;
-
+        width: 100%;
+        height: 100%;
     }
 
 
 
 
 
+    .tekst_overskrift {
+
+
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+
+    }
+
+
+    .tips_overskrift {
+        position: relative;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 5px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: -200px;
+
+
+    }
+
+
+    .citat {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 5px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 3em;
+        margin-top: 0px;
+
+    }
+
+    .citat2 {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 3px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 1em;
+
+    }
 
 
 
@@ -411,7 +554,7 @@ display: flex;
 
 .box {
     position: absolute;
-    top: 282px;
+    top: 840px;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -457,10 +600,18 @@ display: flex;
 
 }
 
+@media (max-width:800px) {
 
+    .box {
+        /*    virker ikke i web lige nu??!!*/
+        top: 300px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
+    }
 
-
+}
 
 
 /************************FOOTER ***********************/
@@ -472,10 +623,11 @@ display: flex;
 
 
 #footer .sectionwrapper {
-    background-color: #a3826f;
-    opacity: 72%;
-    padding: 40px 20px 40px 20px;
+    background-color: rgb(193, 162, 145);
+    padding: 40px 40px 40px 40px;
     margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -490,6 +642,11 @@ display: flex;
 #footer .txt,
 #footer .txt2 {
     margin-top: 10px;
+    text-align: left;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
 }
 
 
@@ -507,146 +664,909 @@ display: flex;
 /*** Information ***/
 #footer .overskrift {
     margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8em;
 }
 
 
 
-#footer .txt {
-    margin-bottom: 20px;
-}
 
-
-
-/**MEDIAQUERY**/
 @media (min-width:800px) {
-
-
-
-    #footer .col {
-        flex-grow: 1;
-        flex-basis: 100px;
-        margin-right: 20px;
+    #footer .overskrift {
+        margin-top: 0px;
     }
 
 
 
-    #footer .col:first-child {
-        flex-grow: 1;
-        margin-left: 20px;
-        margin-right: 60px;
+    #footer .sectionwrapper {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+
     }
-
-
-
-    @media (min-width:800px) {
-        #footer .overskrift {
-            margin-top: 0px;
-        }
-    }
-
-
-    .sectionwrapper {
-        display: flex;
-        Flex-wrap: wrap;
-    }
-
-
-
-
-
-
-
-
-
 
 }
 
-
-
-
- /************************OM SIDE ***********************/
-
-    /*** Kontaktformular ***/
 #footer .bottom {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 
+#footer_links li {
 
-#footer .navn,
-#footer .email,
-#footer .besked {
-    background-color: #ffffff;
-    color: #b5b0a6;
-    margin-bottom: 5px;
-    padding: 10px;
+    padding: inherit;
+    display: flex;
 }
 
+.footer2_links a {
 
-
-#footer .send {
-    background-color: #29487d;
-    color: #ffffff;
-    text-align: center;
+    padding: 0;
     margin-top: 10px;
-    padding: 10px;
+}
+
+
+#some {
+
+    display: grid;
+}
+
+#some img {
+
+    width: 12%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/************************ KONTAKT SIDE ***********************/
+
+/********** kontaktformular **********/
+
+
+
+
+/* Kode lånt fra W3schools.com */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+        text-align: left;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #ccaba2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 
 }
 
 
 
-    /************************ kontakt ***********************/
 
-    /*** Kontaktformular ***/
-    #footer .bottom {
-        margin-top: 20px;
-        margin-bottom: 20px;
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #c19a8f;
+
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #665956;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: justify;
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+
+
+
+#kontakt_box {
+    background-color: #665956;
+
+}
+
+label {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+}
+
+/*#ccaba2 */
+
+
+.kontakt_splash img {
+
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin-top: -197px;
+
+    height: 50%;
+
+
+}
+
+
+
+/*Mobilversion til kontaktformular */
+@media (max-width:800px) {
+
+    .container {
+
+        left: 0;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+        width: 220%;
+    }
+
+}
+
+
+
+/********** kontaktformular slut  **********/
+
+
+.kontakt_overskrift {
+
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+
+#map iframe {
+    width: 100%;
+    height: 180%;
+    margin-top: 40px;
+
+
+
+}
+
+
+
+
+
+.boks img {
+
+    width: 75%;
+    height: auto;
+
+
+}
+
+
+
+
+
+
+.kontakt_wide {
+
+
+    text-align: center;
+}
+
+
+
+
+
+
+/*mediaquery til kontaktside til web*/
+@media (min-width:800px) {
+
+
+
+
+    .kontakt_wide {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+    /*
+    .container {
+        width: 50%;
+    margin-left: 369px;
+    margin-bottom: 40px;
+    }
+*/
+
+    .kontakt_splash img {
+
+        width: 100%;
+        position: relative;
+        margin-top: -196px;
     }
 
 
 
-    .navn,
-    .email,
-    .besked {
-        background-color: #ffffff;
-        color: #b5b0a6;
-        margin-bottom: 5px;
-        padding: 10px;
+
+}
+
+
+
+
+
+
+
+/************************ kontakt slut ***********************/
+
+/************************ om ***********************/
+
+
+.splash_om img {
+    width: 103%;
+    position: relative;
+    top: 0;
+    margin-top: -250px;
+    object-fit: contain;
+}
+
+
+.om_overskrift {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: -160px;
+}
+
+.om_overskrift2 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    margin: -100px -90px 20px 40px;
+}
+
+.om_billede img {
+
+    width: 80%;
+    height: 100%;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+
+.om_text {
+    text-align: left;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin: 20px -90px 20px 40px;
+}
+
+.om_text1 {
+    text-align: left;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin: 20px -90px 20px 40px;
+}
+
+.om_text2 {
+    text-align: left;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin: 20px -90px 20px 40px;
+}
+
+
+#om_oversigt {
+
+    margin-top: 100px;
+}
+
+
+@media (min-width:800px) {
+    .om_wide {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
+    .splash_om img {
+        width: 100%;
+        position: relative;
+        margin-top: -86px;
+        object-fit: inherit;
+        height: 50%;
 
+    }
 
-    .send {
-        background-color: #29487d;
-        color: #ffffff;
+    .om_overskrift {
         text-align: center;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 5px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 20px;
         margin-top: 10px;
+    }
+
+
+    .om_overskrift2 {
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        margin: 0px -50px 20px 50px;
+    }
+
+    .om_text_narrow {
+        text-align: left;
+        line-height: 1.2;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
         padding: 10px;
+        padding-right: 152px;
+        margin-top: 150px;
+    }
+
+    .om_text {
+        text-align: left;
+        line-height: 1.4;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        margin: 20px 0px 20px 50px;
+    }
+
+    .om_text1 {
+        text-align: left;
+        line-height: 1.4;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        margin: 20px 0px 20px 50px;
+    }
+
+    .om_text2 {
+        text-align: left;
+        line-height: 1.4;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        margin: 20px 0px 20px 50px;
+    }
+}
+
+
+
+.om_billede img {
+
+    width: 80%;
+    height: 100%;
+    padding: 30px;
+}
+
+.om_text_narrow {
+    text-align: left;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    padding: 10px;
+    padding-right: 152px;
+    margin-top: 150px;
+}
+
+
+
+
+
+/************************ SHOP SIDEN ***********************/
+
+.billede {
+    width: 80%;
+}
+
+#shop_h1 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 30px;
+    align-self: center;
+    text-align: center;
+}
+
+
+#bryster_oversigt {
+    margin-top: -100px;
+}
+
+
+#shop_splash {
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin-top: -140px;
+}
+
+#filter_nav {
+    margin-top: 50px;
+    background-color: white;
+    z-index: 0;
+    position: relative;
+}
+
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 143px;
+    font-size: 1.5em;
+}
+
+.navn {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.pris {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+main {
+
+    text-align: center;
+    margin-top: 100px;
+}
+
+article {
+    width: 100%;
+    margin-bottom: 65px;
+}
+
+article h1 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 30px;
+    align-self: center;
+    text-align: center;
+}
+
+
+
+
+
+
+.knap {
+    background-color: #665956;
+    width: 151px;
+    height: 35px;
+    text-align-last: center;
+    position: relative;
+    left: 32%;
+    padding: 8px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-top: 12px;
+}
+
+
+
+
+.filter {
+    margin-left: 0;
+    padding: 9px;
+    width: 21%;
+    border-radius: 26px;
+    font-size: 0.7em;
+    height: 11vw;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1.6px;
+    background-color: #665956;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+
+
+
+
+/*mediaquery til shopside til web */
+
+@media (min-width:800px) {
+
+    #bryster_oversigt {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        margin-bottom: 100px;
+    }
+
+
+
+    .billede {
+        /*    margin-top: 30px;*/
+        width: 80%;
+    }
+
+
+
+    .filter {
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1.6px;
+        background-color: #665956;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        margin-left: 0;
+        padding: 0;
+        width: 17%;
+        border-radius: 50px;
+        color: white;
+        font-size: 1.1em;
+        height: 7vh;
+    }
+
+}
+
+
+
+
+
+
+
+
+/*
+@media (max-width: 700px) {
+    header{
+        display: grid;
 
     }
 
-    /************************ kontakt slut ***********************/
+    button.filter {
+        margin: 0;
+           border-block-end: revert;
+    }
+}
 
-    /************************ om ***********************/
+
+@media (max-width: 1365px) {
+    header{
+        display: grid;
+
+    }
+
+    button.filter {
+        margin: 0;
+           border-block-end: revert;
+    }
+}
 
 
-    .om_splash img {
+@media (max-width: 850px) {
 
+
+    #popop article {
+        width: 85vw;
+    height: 100vh;
+        grid-template-rows: 1fr 1fr;
+        display: grid;
+    }
+
+}
+*/
+
+
+
+
+
+
+
+
+
+.filter:focus {
+    color: white;
+    background-color: black;
+}
+
+.filter:hover {
+    background-color: grey;
+}
+
+
+
+/*
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+}
+*/
+
+
+
+/*----------------------------------POPOP START --------------------------------*/
+
+#popop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    z-index: 1;
+}
+
+
+#popop article {
+    width: 83vw;
+    height: 96vh;
+    margin: 4rem auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#luk {
+    position: fixed;
+    top: 12%;
+    right: 1em;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: .1em;
+    width: 32px;
+    height: 32px;
+    left: 17%;
+}
+
+
+#popop img {
+    width: 80%;
+    align-self: center;
+    position: relative;
+    left: 37px;
+}
+
+
+
+
+
+#popop h2 {
+    align-self: center;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+#popop p {
+    align-self: center;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 14px;
+
+}
+
+
+
+
+#popop h5 {
+
+    background-color: #665956;
+    width: 158px;
+    height: 36px;
+    text-align-last: center;
+    position: relative;
+    left: 32%;
+    padding: 8px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-top: 25px;
+    z-index: 1;
+
+}
+
+
+
+
+
+@media (min-width:800px) {
+
+    #popop {
+        position: fixed;
+        left: 0;
+        top: 0;
         width: 100vw;
-        height: auto;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .8);
+        display: none;
+        /*    z-index: 1; */
 
     }
 
 
-    .billede_om img {
 
-  width: 10%;
- height: 10%;
-     display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+    #popop article {
+        width: 80vw;
+        height: 60vh;
+        margin: 4rem auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+
+
+
+    }
+
+    #popop section {
+        display: grid;
+        grid-gap: 0;
+
+    }
+
+
+    article h1 {
+        align-self: end;
+        text-align: center;
+        font-size: 2.5em;
     }
 
 
 
+    #popop p {
+        align-self: start;
+    }
+
+
+    #luk {
+        position: fixed;
+        top: 12%;
+        right: 1em;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        padding: .1em;
+        width: 32px;
+        height: 32px;
+        left: 17%;
+        z-index: 1;
+    }
+
+    #popop h5 {
+        z-index: 1;
+    }
+
+
+}
+
+
+
+
+
+
+/*----------------------------------HANDELSBETINGELSER  --------------------------------*/
+
+
+
+#handels_oversigt h1 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2em;
+
+
+}
+
+#handels_oversigt h2 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: start;
+    margin-top: 30px;
+}
+
+
+#handels_oversigt p {
+    text-align: left;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+
+    margin-top: 1px;
+}
+
+#handels_oversigt {
+
+    padding: 100px;
+}

@@ -6,28 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header>
-    <nav role="navigation">
+    <header>
+        <nav role="navigation">
 
-        <div class="logo-nav">
-            <a href="index.html"> <img src="HandmadebyTone-logo-100x100-1.jpg" alt=""></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="om.html">Om Handmade By Tone</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="kurv.html">Kurv</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
-</header>
+            <div class="logo-nav">
+                <a href="index.html"> <img src="HandmadebyTone-logo-100x100-1.jpg" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="om.html">Om Handmade By Tone</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
 
+            <a href="kurv.html"><img src="icons8-basket-80.png" style="width:35px;height:35px;"></a>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
 
 
 
@@ -40,27 +44,57 @@
     </main>
 
 
+
     <footer>
         <section id="footer">
             <section class="sectionwrapper">
 
                 <section class="col">
                     <section class="overskrift">
-                        <h2>Kontakt Information</h2>
+                        <h2>Handmade By Tone</h2>
                     </section>
                     <section class="txt">
-                        <p><strong>Tlf. nr.</strong> <br> +45 74 42 18 48 <br> <br> <strong>E-mail</strong> <br> info@handmadebytone.dk <br> <br> <strong>Adresse</strong> <br> Friheds Allé 42, 9000 Aalborg <br> <br>
+                        <p><strong>Tlf. nr.</strong><br> +45 31 77 19 95 <br> <br> <strong>E-mail</strong> <br> kontakt@handmadebytone.dk <br> <br> <strong>Adresse</strong> <br> C. A. Olesens Gade 1, 9000 Aalborg <br> <br>
                         </p>
 
                     </section>
                 </section>
 
+                <section id="footer_links">
+                    <section class="overskrift">
+                        <h2>Links </h2>
+                    </section>
+
+
+
+                    <ul class="footer2_links">
+                        <li><a href="handelsbetingelser.html">Handelsbetingelser</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </section>
+
+
+
+                <section id="some">
+                    <section class="overskrift">
+                        <h2>Følg os på sociale medier </h2>
+                    </section>
+
+
+                    <img src="icons8-instagram-80%20(1).png">
+
+
+                    <img src="icons8-facebook-80.png">
+
+
+                </section>
 
             </section>
 
         </section>
 
     </footer>
+
 
 
     <script src="script.js"></script>
@@ -82,8 +116,24 @@
             document.querySelector("#om_oversigt").innerHTML = indhold.content.rendered;
 
         }
+
+
+        //        scroll til nav farve
+        const div = document.querySelector("nav");
+        const meter = document.querySelector("progress");
+        document.addEventListener("scroll", tjekScroll);
+
+        function tjekScroll() {
+            console.log(window.scrollY);
+            if (window.scrollY >= 200) {
+                div.style.backgroundColor = "rgb(193, 162, 145)";
+
+            } else {
+                div.style.backgroundColor = "rgba(255, 255, 255, 0)";
+            }
+        }
+
     </script>
-</body></html>
+</body>
 
-
-
+</html>
